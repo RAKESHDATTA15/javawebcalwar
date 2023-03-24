@@ -14,6 +14,6 @@ node {
         sh 'docker container run -dt --name ${tag} -p ${value}:8080 rakeshdatta12/java-auto '
     }
     stage('see'){
-        sh 'docker container ps '
+        sh 'docker container ps && docker image ls '
     }
 }
