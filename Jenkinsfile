@@ -11,7 +11,7 @@ node {
         sh 'docker build --build-arg url=https://github.com/THOTARAKESH/javawebcalwar.git -t rakeshdatta12/java-auto   .'
         }
     stage('Results') {
-        sh 'docker container run -dt --name ${tag} -p ${value}:8080 rakeshdatta12/java-auto '
+        sh 'docker container run -dt --name web2 -p 8083:8080 rakeshdatta12/java-auto '
     }
     stage('see'){
         sh 'docker container ps && docker image ls '
