@@ -24,7 +24,7 @@
 <distributionManagement>
   <repository>
     <id>Releases</id>
-        <url>http://3.134.82.1:8081/nexus/storage/Releases</url>
+       <!-- <url>http://3.134.82.1:8081/nexus/storage/Releases</url>-->
   </repository>
 </distributionManagement>
    <build>
