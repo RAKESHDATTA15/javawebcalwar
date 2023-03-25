@@ -17,7 +17,7 @@ node {
             [
                 artifactId: 'WebAppCal', 
                 classifier: '', 
-                file: '/var/lib/jenkins/workspace/nexus/target/WebAppCal-0.0.3.war',
+                file: "/var/lib/jenkins/workspace/nexus/target/WebAppCal-${rakesh}.war",
                 type: 'war'
             ]
         ], 
