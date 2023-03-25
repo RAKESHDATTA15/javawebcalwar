@@ -17,7 +17,7 @@ node {
             [
                 artifactId: 'WebAppCal', 
                 classifier: '', 
-                file: '/var/lib/jenkins/workspace/nexus/target/WebAppCal-${rakesh}.war',
+                file: '/var/lib/jenkins/workspace/nexus/target/WebAppCal-rakesh.war',
                 type: 'war'
             ]
         ], 
@@ -27,6 +27,6 @@ node {
         nexusVersion: 'nexus3', 
         protocol: 'http', 
         repository: 'releases',
-        version: '${rakesh}'
+        version: 'rakesh'
     }  
 }
