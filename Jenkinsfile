@@ -11,12 +11,13 @@ node {
         sh 'mvn clean install'
     }
     stage('nexus'){
+        def pomversion = readMavenPom file: 'pom.xml'
         nexusArtifactUploader artifacts: 
         [
             [
                 artifactId: 'WebAppCal', 
                 classifier: '', 
-                file: '/var/lib/jenkins/workspace/java/javawebcalwar/target/WebAppCal-0.0.2.war',
+                file: '/var/lib/jenkins/workspace/java/javawebcalwar/target/WebAppCal-${pomversion}.war',
                 type: 'war'
             ]
         ], 
@@ -26,6 +27,6 @@ node {
         nexusVersion: 'nexus3', 
         protocol: 'http', 
         repository: 'releases',
-        version: '0.0.2'
+        version: '${pomversion}'
     }  
 }
