@@ -17,7 +17,7 @@ node {
             [
                 artifactId: 'WebAppCal', 
                 classifier: '', 
-                file: '/var/lib/jenkins/workspace/java/javawebcalwar/target/WebAppCal-${pomversion}.war',
+                file: '/var/lib/jenkins/workspace/java/javawebcalwar/target/WebAppCal-${pomversion.version}.war',
                 type: 'war'
             ]
         ], 
@@ -27,6 +27,6 @@ node {
         nexusVersion: 'nexus3', 
         protocol: 'http', 
         repository: 'releases',
-        version: '${pomversion}'
+        version: '${pomversion.version}'
     }  
 }
