@@ -1,4 +1,7 @@
 node {
+    stage('git checkout') {
+        
+    
     stage('test') {
         // Run the maven build
         sh 'mvn  test'
