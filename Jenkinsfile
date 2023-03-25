@@ -5,10 +5,10 @@ node {
     }
     stage('integration test') {
         // Run the maven build
-        sh 'mvn verify -f /var/lib/jenkins/workspace/java/javawebcalwar/pom.xml -DskipUnitTest'
+        sh 'mvn -DskipUnitTest'
     }
     stage('build') {
-        sh 'mvn clean -f /var/lib/jenkins/workspace/java/javawebcalwar/pom.xml install'
+        sh 'mvn clean install'
     }
     stage('nexus'){
         nexusArtifactUploader artifacts: 
