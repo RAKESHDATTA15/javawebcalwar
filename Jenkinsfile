@@ -1,7 +1,7 @@
 node {
     stage('git checkout') {
-        
-    
+        git branch: 'main', url: 'https://github.com/THOTARAKESH/javawebcalwar.git'
+    }
     stage('test') {
         // Run the maven build
         sh 'mvn  test'
