@@ -11,7 +11,7 @@ node {
         sh 'mvn clean install'
     }
     stage('nexus'){
-        def rakesh = readMavenPom file: 'pom.xml'
+        def rakesh =  readMavenPom file: 'pom.xml'
         nexusArtifactUploader artifacts: 
         [
             [
@@ -27,6 +27,6 @@ node {
         nexusVersion: 'nexus3', 
         protocol: 'http', 
         repository: 'releases',
-            version: '${rakesh}'
+            version: "${rakesh}"
     }  
 }
