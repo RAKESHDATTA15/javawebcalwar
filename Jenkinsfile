@@ -5,7 +5,7 @@ node {
     }
     stage('integration test') {
         // Run the maven build
-        sh 'mvn -DskipUnitTest'
+        sh 'mvn verify -DskipUnitTest'
     }
     stage('build') {
         sh 'mvn clean install'
